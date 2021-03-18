@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet>
+        <Constraint
+            android:layout_height="40dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintHorizontal_bias="0.095"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="293dp"
+            android:id="@+id/editTextTextPersonName"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="140dp" />
+        <Constraint
+            android:layout_height="18dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="64dp"
+            android:id="@+id/textView"
+            android:layout_marginTop="112dp"
+            android:layout_marginLeft="64dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/checkBox"
+            android:layout_marginLeft="64dp"
+            android:layout_marginStart="64dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="200dp" />
+        <Constraint
+            android:layout_height="48dp"
+            android:layout_width="139dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/toggleButton"
+            android:layout_marginLeft="200dp"
+            android:layout_marginStart="200dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="200dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintHorizontal_bias="0.075"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/button"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="268dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+    </ConstraintSet>
+</MotionScene>
