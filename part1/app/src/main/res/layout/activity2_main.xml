@@ -22,11 +22,11 @@
         android:id="@+id/editTextTextPersonName3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="336dp"
+        android:layout_marginStart="340dp"
         android:layout_marginTop="68dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="lasName"
+        android:text="lastName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,7 +46,7 @@
         android:id="@+id/editTextPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="336dp"
+        android:layout_marginStart="340dp"
         android:layout_marginTop="200dp"
         android:ems="10"
         android:inputType="phone"
