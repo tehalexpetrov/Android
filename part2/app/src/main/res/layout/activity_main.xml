@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:background="@android:color/holo_orange_dark">
+    android:background="@drawable/beach">
 
     <!--Подключаем второй activity-->
     <include layout="@layout/activity_main_linear" />
-</>
+</FrameLayout>
