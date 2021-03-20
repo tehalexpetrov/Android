@@ -6,5 +6,5 @@
     tools:background="@android:color/holo_orange_dark">
 
     <!--Подключаем второй activity-->
-    <include layout="@layout/activity_main_frame" />
+    <include layout="@layout/activity_linear" />
 </>
