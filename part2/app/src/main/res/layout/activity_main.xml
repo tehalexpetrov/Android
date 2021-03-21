@@ -8,5 +8,5 @@
 
     <!--Подключаем второй activity-->
     <include layout="@layout/activity_main_constrait" />
-
+ <!--Блок кода для дальнейшей работы-->
 </FrameLayout>
