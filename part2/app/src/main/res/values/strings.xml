@@ -15,4 +15,23 @@
     <string name="_plus">plus</string>
     <string name="_0">0</string>
     <string name="multiple">*</string>
+
+    <style name="MyTheme">
+        <item name="android:background">@drawable/beach</item>
+        <item name="android:orientation">horizontal</item>
+
+    </style>
+
+    <style name="ButtonStileCalculator">
+        <item name="android:layout_margin">@dimen/button_margin</item>
+        <item name="android:textSize">@dimen/number_text_size</item>
+        <item name="android:backgroundTint">@color/foneButton</item>
+    </style>
+
+    <style name="TextViewCalculator">
+        <item name="android:textSize">@dimen/textSize</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
 </resources>

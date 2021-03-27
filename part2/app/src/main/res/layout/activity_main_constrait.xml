@@ -4,17 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/beach"
-    android:elevation="2dp"
-    android:theme="@style/TextAppearance.AppCompat">
-
+    android:theme="@style/MyTheme">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/resultField"
-        android:layout_width="0dp"
+        style="@style/TextViewCalculator"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Результаты"
-        android:textSize="@dimen/textSize"
+        android:foregroundGravity="fill_horizontal"
         app:layout_constraintBottom_toTopOf="@+id/operationField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -26,11 +23,11 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/operationField"
-        android:layout_width="0dp"
+        style="@style/TextViewCalculator"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="="
-        android:textSize="45sp"
-        android:textAlignment="center"
+        android:clickable="false"
+        app:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@+id/numberField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -40,10 +37,9 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/numberField"
+        style="@style/TextViewCalculator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Начните ввод чисел"
-        android:textSize="@dimen/textSize"
         app:layout_constraintBottom_toTopOf="@+id/b8"
         app:layout_constraintEnd_toStartOf="@+id/b9"
         app:layout_constraintHorizontal_bias="0.506"
@@ -53,12 +49,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b2"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onNumberClick"
         android:text="2"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toTopOf="@+id/dot"
         app:layout_constraintEnd_toStartOf="@+id/b3"
         app:layout_constraintHorizontal_bias="0.5"
@@ -68,12 +63,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b8"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onNumberClick"
         android:text="8"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toTopOf="@+id/b5"
         app:layout_constraintEnd_toStartOf="@+id/b9"
         app:layout_constraintHorizontal_bias="0.5"
@@ -83,12 +77,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b9"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onNumberClick"
         android:text="9"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toTopOf="@+id/b6"
         app:layout_constraintEnd_toStartOf="@+id/devide"
         app:layout_constraintHorizontal_bias="0.5"
@@ -100,12 +93,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/substract"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onOperationClick"
         android:text="-"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toTopOf="@+id/plus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -115,12 +107,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/devide"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onOperationClick"
         android:text="/"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toTopOf="@+id/multy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -132,12 +123,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b1"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onNumberClick"
         android:text="1"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toTopOf="@+id/b0"
         app:layout_constraintEnd_toStartOf="@+id/b2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -148,12 +138,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b7"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onNumberClick"
         android:text="7"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toTopOf="@+id/b4"
         app:layout_constraintEnd_toStartOf="@+id/b8"
         app:layout_constraintHorizontal_bias="0.5"
@@ -166,12 +155,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/multy"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onOperationClick"
         android:text="@string/multiple"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toTopOf="@+id/substract"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -182,12 +170,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b5"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onNumberClick"
         android:text="5"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toTopOf="@+id/b2"
         app:layout_constraintEnd_toStartOf="@+id/b6"
         app:layout_constraintHorizontal_bias="0.5"
@@ -198,12 +185,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b4"
+        style="@style/ButtonStileCalculator"
         android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onNumberClick"
         android:text="4"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toTopOf="@+id/b1"
         app:layout_constraintEnd_toStartOf="@+id/b5"
         app:layout_constraintHorizontal_bias="0.5"
@@ -214,12 +200,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b6"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onNumberClick"
         android:text="6"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toTopOf="@+id/b3"
         app:layout_constraintEnd_toStartOf="@+id/multy"
         app:layout_constraintHorizontal_bias="0.5"
@@ -230,12 +215,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/dot"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onNumberClick"
         android:text="."
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/eq"
         app:layout_constraintHorizontal_bias="0.5"
@@ -245,12 +229,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b0"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onNumberClick"
         android:text="0"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/dot"
         app:layout_constraintHorizontal_bias="0.5"
@@ -261,12 +244,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/plus"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onOperationClick"
         android:text="+"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -276,12 +258,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/eq"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onOperationClick"
         android:text="="
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/plus"
         app:layout_constraintHorizontal_bias="0.5"
@@ -291,12 +272,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/b3"
+        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/button_margin"
         android:onClick="onNumberClick"
         android:text="3"
-        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toTopOf="@+id/eq"
         app:layout_constraintEnd_toStartOf="@+id/substract"
         app:layout_constraintHorizontal_bias="0.5"
