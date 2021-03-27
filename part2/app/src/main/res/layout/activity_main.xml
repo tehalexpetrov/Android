@@ -7,5 +7,6 @@
     android:background="@drawable/beach">
 
     <!--Подключаем второй activity-->
-    <include layout="@layout/activity_main_linear" />
+    <include layout="@layout/activity_main_constrait" />
+ <!--Блок кода для дальнейшей работы-->
 </FrameLayout>
