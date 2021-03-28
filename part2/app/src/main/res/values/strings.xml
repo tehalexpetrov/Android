@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">Calculator</string>
-    <string name="test">test</string>
-    <string name="test2">test2</string>
-    <string name="test3">test3</string>
     <string name="_1">1</string>
     <string name="_2">2</string>
     <string name="_3">3</string>
@@ -14,18 +11,10 @@
     <string name="_9">9</string>
     <string name="_plus">plus</string>
     <string name="_0">0</string>
-    <string name="multiple">*</string>
-
-    <style name="MyTheme">
-        <item name="android:background">@drawable/beach</item>
-        <item name="android:orientation">horizontal</item>
-
-    </style>
 
     <style name="ButtonStileCalculator">
         <item name="android:layout_margin">@dimen/button_margin</item>
         <item name="android:textSize">@dimen/number_text_size</item>
-        <item name="android:backgroundTint">@color/foneButton</item>
     </style>
 
     <style name="TextViewCalculator">

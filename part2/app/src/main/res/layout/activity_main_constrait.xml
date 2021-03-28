@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/MyTheme">
+    android:orientation="horizontal"
+    android:theme="@drawable/beach">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/resultField"
         style="@style/TextViewCalculator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:foregroundGravity="fill_horizontal"
         app:layout_constraintBottom_toTopOf="@+id/operationField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -26,8 +26,6 @@
         style="@style/TextViewCalculator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="false"
-        app:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@+id/numberField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -159,7 +157,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onOperationClick"
-        android:text="@string/multiple"
+        android:text="*"
         app:layout_constraintBottom_toTopOf="@+id/substract"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
