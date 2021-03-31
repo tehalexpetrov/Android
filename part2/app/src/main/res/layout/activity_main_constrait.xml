@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:theme="@drawable/beach">
+    android:background="@drawable/beach"
+    android:orientation="horizontal">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/resultField"
@@ -280,6 +280,33 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b2"
         app:layout_constraintTop_toBottomOf="@+id/b6"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.radiobutton.MaterialRadioButton
+        android:id="@+id/light"
+        style="@style/RadioButtonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LightTheme"
+        app:layout_constraintBottom_toTopOf="@+id/Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dot"
+        app:layout_constraintVertical_bias="0.659"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.radiobutton.MaterialRadioButton
+        android:id="@+id/Dark"
+        style="@style/RadioButtonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DarkTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/light"
         tools:ignore="MissingConstraints" />
 
 

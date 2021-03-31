@@ -30,19 +30,6 @@ public class MainActivity extends AppCompatActivity {
         numberField = (TextView) findViewById(R.id.numberField);
         operationField = (TextView) findViewById(R.id.operationField);
 
-        String instanceState;
-        if (savedInstanceState == null) {
-            instanceState = "Первый запуск!";
-        } else {
-            instanceState = "Повторный запуск!";
-        }
-        makeToast(instanceState + " - onCreate()");
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        makeToast("onStart()");
     }
 
     @Override
@@ -56,18 +43,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        makeToast("onResume");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        makeToast("onPause()");
-    }
-
-    @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         outState.putString("OPERATION", lastOperation);
         if (operand != null)
@@ -76,17 +51,6 @@ public class MainActivity extends AppCompatActivity {
         makeToast("onSaveInstanceState");
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        makeToast("onStop()");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        makeToast("onDestroy");
-    }
 
     // обработка нажатия на числовую кнопку
     public void onNumberClick(View view) {

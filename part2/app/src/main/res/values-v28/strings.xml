@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="RadioButtonTheme">
+        <!--<item name="android:background">@color/foneButton</item> -->
+        <item name="android:padding">@dimen/paddingValue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textSize</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
