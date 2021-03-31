@@ -15,7 +15,7 @@
     <style name="ButtonStileCalculator">
         <item name="android:layout_margin">@dimen/button_margin</item>
         <item name="android:textSize">@dimen/number_text_size</item>
-        <item name="android:background">#3F51B5</item>
+        <item name="android:background">#1E3BD7</item>
     </style>
 
     <style name="TextViewCalculator">
