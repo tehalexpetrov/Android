@@ -1,11 +1,9 @@
 package com.calculator;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,9 +14,9 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private final static String TAG = "MainActivity";
-    TextView resultField; // текстовое поле для вывода результата
-    EditText numberField;   // поле для ввода числа
-    TextView operationField;    // текстовое поле для вывода знака операции
+    private TextView resultField; // текстовое поле для вывода результата
+    private TextView numberField;   // поле для ввода числа
+    private TextView operationField;    // текстовое поле для вывода знака операции
     Double operand = null;  // операнд операции
     String lastOperation = "="; // последняя операция
 
@@ -29,22 +27,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         resultField = (TextView) findViewById(R.id.resultField);
-        numberField = (EditText) findViewById(R.id.numberField);
+        numberField = (TextView) findViewById(R.id.numberField);
         operationField = (TextView) findViewById(R.id.operationField);
 
-        String instanceState;
-        if (savedInstanceState == null) {
-            instanceState = "Первый запуск!";
-        } else {
-            instanceState = "Повторный запуск!";
-        }
-        makeToast(instanceState + " - onCreate()");
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        makeToast("onStart()");
     }
 
     @Override
@@ -58,18 +43,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        makeToast("onResume");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        makeToast("onPause()");
-    }
-
-    @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         outState.putString("OPERATION", lastOperation);
         if (operand != null)
@@ -78,41 +51,30 @@ public class MainActivity extends AppCompatActivity {
         makeToast("onSaveInstanceState");
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        makeToast("onStop()");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        makeToast("onDestroy");
-    }
 
     // обработка нажатия на числовую кнопку
-    public void onNumberClick(View view){
+    public void onNumberClick(View view) {
 
-        Button button = (Button)view;
+        Button button = (Button) view;
         numberField.append(button.getText());
 
-        if(lastOperation.equals("=") && operand!=null){
+        if (lastOperation.equals("=") && operand != null) {
             operand = null;
         }
     }
 
     // обработка нажатия на кнопку операции
-    public void onOperationClick(View view){
+    public void onOperationClick(View view) {
 
-        Button button = (Button)view;
+        Button button = (Button) view;
         String op = button.getText().toString();
         String number = numberField.getText().toString();
         // если введенно что-нибудь
-        if(number.length()>0){
+        if (number.length() > 0) {
             number = number.replace(',', '.');
-            try{
+            try {
                 performOperation(Double.valueOf(number), op);
-            }catch (NumberFormatException ex){
+            } catch (NumberFormatException ex) {
                 numberField.setText("");
             }
         }
@@ -120,36 +82,34 @@ public class MainActivity extends AppCompatActivity {
         operationField.setText(lastOperation);
     }
 
-    private void performOperation(Double number, String operation){
+    private void performOperation(Double number, String operation) {
 
         // если операнд ранее не был установлен (при вводе самой первой операции)
-        if(operand ==null){
+        if (operand == null) {
             operand = number;
-        }
-        else{
-            if(lastOperation.equals("=")){
+        } else {
+            if (lastOperation.equals("=")) {
                 lastOperation = operation;
             }
-            switch(lastOperation){
+            switch (lastOperation) {
                 case "=":
-                    operand =number;
+                    operand = number;
                     break;
                 case "/":
-                    if(number==0){
-                        operand =0.0;
-                    }
-                    else{
-                        operand /=number;
+                    if (number == 0) {
+                        operand = 0.0;
+                    } else {
+                        operand /= number;
                     }
                     break;
                 case "*":
-                    operand *=number;
+                    operand *= number;
                     break;
                 case "+":
-                    operand +=number;
+                    operand += number;
                     break;
                 case "-":
-                    operand -=number;
+                    operand -= number;
                     break;
             }
         }
