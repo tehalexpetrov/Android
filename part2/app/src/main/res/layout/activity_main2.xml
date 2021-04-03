@@ -6,6 +6,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <!--Подключаем второй activity-->
-    <include layout="@layout/activity_intent_main" />
+    <include layout="@layout/activity_main_constrait" />
     <!--Блок кода для дальнейшей работы-->
 </FrameLayout>

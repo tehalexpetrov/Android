@@ -308,5 +308,17 @@
         app:layout_constraintTop_toBottomOf="@+id/light"
         tools:ignore="MissingConstraints" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/rn"
+        style="@style/ButtonStileCalculator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="Вернуться"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
