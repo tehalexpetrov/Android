@@ -7,232 +7,228 @@
     android:background="@drawable/beach"
     android:orientation="horizontal">
 
-    <com.google.android.material.textview.MaterialTextView
+    <!--Текущие значения-->
+
+    <!--Вывод результатов-->
+
+
+    <TextView
         android:id="@+id/resultField"
-        style="@style/TextViewCalculator"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
         app:layout_constraintBottom_toTopOf="@+id/operationField"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19"
+        app:layout_constraintVertical_bias="0.81"
         app:layout_constraintVertical_chainStyle="packed"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.textview.MaterialTextView
+    <TextView
         android:id="@+id/operationField"
-        style="@style/TextViewCalculator"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
         app:layout_constraintBottom_toTopOf="@+id/numberField"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultField"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.textview.MaterialTextView
+
+    <TextView
         android:id="@+id/numberField"
-        style="@style/TextViewCalculator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
         app:layout_constraintBottom_toTopOf="@+id/b8"
         app:layout_constraintEnd_toStartOf="@+id/b9"
-        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="@+id/b9"
         app:layout_constraintTop_toBottomOf="@+id/operationField"
         tools:ignore="MissingConstraints,NotSibling" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/b2"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onNumberClick"
         android:text="2"
-        app:layout_constraintBottom_toTopOf="@+id/dot"
+        android:textSize="@dimen/number_text_size"
         app:layout_constraintEnd_toStartOf="@+id/b3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b1"
-        app:layout_constraintTop_toBottomOf="@+id/b5"
+        app:layout_constraintTop_toTopOf="@+id/b3"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/b8"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onNumberClick"
         android:text="8"
-        app:layout_constraintBottom_toTopOf="@+id/b5"
+        android:textSize="@dimen/number_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/b7"
         app:layout_constraintEnd_toStartOf="@+id/b9"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b7"
-        app:layout_constraintTop_toBottomOf="@+id/numberField"
+        app:layout_constraintTop_toTopOf="@+id/b7"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/b9"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onNumberClick"
         android:text="9"
-        app:layout_constraintBottom_toTopOf="@+id/b6"
+        android:textSize="@dimen/number_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/b8"
         app:layout_constraintEnd_toStartOf="@+id/devide"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b8"
-        app:layout_constraintTop_toBottomOf="@+id/numberField"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@+id/b8"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/substract"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onOperationClick"
         android:text="-"
-        app:layout_constraintBottom_toTopOf="@+id/plus"
+        android:textSize="@dimen/number_text_size"
+        app:layout_constraintBaseline_toBaselineOf="@+id/b3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b3"
-        app:layout_constraintTop_toBottomOf="@+id/multy"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/devide"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onOperationClick"
         android:text="/"
-        app:layout_constraintBottom_toTopOf="@+id/multy"
+        android:textSize="@dimen/number_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/b9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b9"
-        app:layout_constraintTop_toBottomOf="@+id/numberField"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@+id/b9"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/b1"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onNumberClick"
         android:text="1"
-        app:layout_constraintBottom_toTopOf="@+id/b0"
+        android:textSize="@dimen/number_text_size"
+        app:layout_constraintBaseline_toBaselineOf="@+id/b2"
         app:layout_constraintEnd_toStartOf="@+id/b2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b4"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/b7"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
         android:onClick="onNumberClick"
         android:text="7"
+        android:textSize="@dimen/number_text_size"
         app:layout_constraintBottom_toTopOf="@+id/b4"
         app:layout_constraintEnd_toStartOf="@+id/b8"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberField"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintVertical_chainStyle="packed"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/multy"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:onClick="onOperationClick"
         android:text="*"
-        app:layout_constraintBottom_toTopOf="@+id/substract"
+        android:textSize="@dimen/number_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/b6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b6"
-        app:layout_constraintTop_toBottomOf="@+id/devide"
+        app:layout_constraintTop_toTopOf="@+id/b6"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/b5"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onNumberClick"
         android:text="5"
-        app:layout_constraintBottom_toTopOf="@+id/b2"
+        android:textSize="@dimen/number_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/b4"
         app:layout_constraintEnd_toStartOf="@+id/b6"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b4"
-        app:layout_constraintTop_toBottomOf="@+id/b8"
+        app:layout_constraintTop_toTopOf="@+id/b4"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/b4"
-        style="@style/ButtonStileCalculator"
-        android:layout_width="88dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="260dp"
         android:onClick="onNumberClick"
         android:text="4"
-        app:layout_constraintBottom_toTopOf="@+id/b1"
+        android:textSize="@dimen/number_text_size"
         app:layout_constraintEnd_toStartOf="@+id/b5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b7"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/b6"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onNumberClick"
         android:text="6"
-        app:layout_constraintBottom_toTopOf="@+id/b3"
+        android:textSize="@dimen/number_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/b5"
         app:layout_constraintEnd_toStartOf="@+id/multy"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b5"
-        app:layout_constraintTop_toBottomOf="@+id/b9"
+        app:layout_constraintTop_toTopOf="@+id/b5"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/dot"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onNumberClick"
         android:text="."
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/number_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/b0"
         app:layout_constraintEnd_toStartOf="@+id/eq"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b0"
-        app:layout_constraintTop_toBottomOf="@+id/b2"
+        app:layout_constraintTop_toTopOf="@+id/b0"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/b0"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
         android:onClick="onNumberClick"
         android:text="0"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/number_text_size"
         app:layout_constraintEnd_toStartOf="@+id/dot"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -240,85 +236,47 @@
         app:layout_constraintTop_toBottomOf="@+id/b1"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/plus"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onOperationClick"
         android:text="+"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/number_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/eq"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/eq"
-        app:layout_constraintTop_toBottomOf="@+id/substract"
+        app:layout_constraintTop_toTopOf="@+id/eq"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/eq"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onOperationClick"
         android:text="="
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/number_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/dot"
         app:layout_constraintEnd_toStartOf="@+id/plus"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/dot"
-        app:layout_constraintTop_toBottomOf="@+id/b3"
+        app:layout_constraintTop_toTopOf="@+id/dot"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/b3"
-        style="@style/ButtonStileCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:onClick="onNumberClick"
         android:text="3"
-        app:layout_constraintBottom_toTopOf="@+id/eq"
+        android:textSize="@dimen/number_text_size"
         app:layout_constraintEnd_toStartOf="@+id/substract"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b2"
-        app:layout_constraintTop_toBottomOf="@+id/b6"
+        app:layout_constraintTop_toBottomOf="@+id/multy"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.radiobutton.MaterialRadioButton
-        android:id="@+id/light"
-        style="@style/RadioButtonTheme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LightTheme"
-        app:layout_constraintBottom_toTopOf="@+id/Dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dot"
-        tools:ignore="MissingConstraints" />
-
-    <com.google.android.material.radiobutton.MaterialRadioButton
-        android:id="@+id/Dark"
-        style="@style/RadioButtonTheme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="DarkTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/light"
-        tools:ignore="MissingConstraints" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/rn"
-        style="@style/ButtonStileCalculator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
-        android:text="Вернуться"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
